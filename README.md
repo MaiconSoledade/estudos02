@@ -1,2 +1,2 @@
 # estudos02
-Estudos no serviço video aula.
+Desenvolvimento Web completo Udemy.
