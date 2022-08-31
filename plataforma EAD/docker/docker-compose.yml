@@ -1,0 +1,25 @@
+version: '3'
+services:
+  web:
+    build: .
+    # env_file: 
+    #   - ambiente.env
+    ports:
+      - "80:80"
+    links: 
+    - mysql:mysql 
+    volumes: 
+      - ../Sapien EAD/:/var/www/html/desenv
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "MySql2020!"
+      MYSQL_DATABASE: "sapien"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql:/var/lib/mysql
+
+volumes: 
+  mysql: {}
